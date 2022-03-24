@@ -44,6 +44,4 @@ resource "azurerm_network_interface" "vmnic" {
     subnet_id                     = azurerm_subnet.sn.id
     private_ip_address_allocation = "Dynamic"
   }
-os_profile_windows_config {
-  }
 }
