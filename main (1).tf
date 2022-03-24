@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "rg" {
   name     = "jonnychipz-app01"
   location = "Central India"
 }
-# Create our Virtual Network - Jonnychipz-VNET
+# Create our Virtual Network - Jonnychipz-VNETs
 resource "azurerm_virtual_network" "vnet" {
   name                = "jonnychipzvnet"
   address_space       = ["10.0.0.0/16"]
