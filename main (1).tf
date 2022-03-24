@@ -44,31 +44,6 @@ resource "azurerm_network_interface" "vmnic" {
     subnet_id                     = azurerm_subnet.sn.id
     private_ip_address_allocation = "Dynamic"
   }
-}
-# Create our Virtual Machine - Jonnychipz-VM01
-resource "azurerm_virtual_machine" "jonnychipzvm01" {
-  name                  = "jonnychipzvm01"
-  location              = azurerm_resource_group.rg.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  network_interface_ids = [azurerm_network_interface.vmnic.id]
-  vm_size               = "Standard_DS1"
-  storage_image_reference {
-    publisher = "MicrosoftWindowsServer"
-    offer     = "WindowsServer"
-    sku       = "2016-Datacenter-Server-Core-smalldisk"
-    version   = "latest"
- }
- storage_os_disk {
-    name              = "jonnychipzvm01os"
-    caching           = "ReadWrite"
-    create_option     = "FromImage"
-    managed_disk_type = "Standard_LRS"
-  }
-  os_profile {
-    computer_name  = "jonnychipzvm01"
-    admin_username = "jonnychipz"
-    admin_password = "Password123$"
- }
 os_profile_windows_config {
   }
 }
