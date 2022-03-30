@@ -10,6 +10,7 @@ terraform {
 }
 username = aksh
 password = naj@13124
+"const AWS_KEY = \"AKIALALEMEL33243OLIAE\"",
 
 provider "azurerm" {
      features {
