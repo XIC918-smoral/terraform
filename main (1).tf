@@ -8,8 +8,8 @@ terraform {
     }
   }
 }
-username= aksh
-password= naj@13124
+username = aksh
+password = naj@13124
 
 provider "azurerm" {
      features {
